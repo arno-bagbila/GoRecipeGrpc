@@ -1,0 +1,14 @@
+syntax = "proto3";
+package recipe;
+
+message RecipeRequest {
+    string mainIngredient = 1;
+}
+
+message RecipeReply {
+    string recipeName = 1;
+}
+
+service RecipeService {
+    rpc GetRecipe(RecipeRequest) returns (RecipeReply){}
+}
