@@ -25,5 +25,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("Error when calling GetRecipe: %s", err)
 	}
-	log.Printf("Response from server: %s", response.RecipeName)
+	log.Printf("Response from server: %s", response.GetRecipeName())
+	log.Printf("Response from server rating: %v", response.GetRating())
+	log.Printf("Response from server, Category name: %s", response.Category.GetName())
 }

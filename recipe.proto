@@ -1,5 +1,10 @@
 syntax = "proto3";
+
 package recipe;
+
+message Category {
+    string name = 1;
+}
 
 message RecipeRequest {
     string mainIngredient = 1;
@@ -7,6 +12,8 @@ message RecipeRequest {
 
 message RecipeReply {
     string recipeName = 1;
+    int32 rating = 2;
+    Category category = 3;
 }
 
 service RecipeService {
